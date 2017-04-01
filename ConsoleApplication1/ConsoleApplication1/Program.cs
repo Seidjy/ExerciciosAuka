@@ -30,11 +30,12 @@ namespace ConsoleApplication1
             {
                 a = linha.IndexOf('(');
                 linha = linha.Remove(a,14);
-                if(linha.Count()-1>12)
+                //-3 por causa do parenteses, do espaço em branco e por começar a contagem do 0
+                if(linha.Count()-3>12)
                 {
-                    linha = linha.ToUpper();
-                    Console.WriteLine(linha);
-                }                
+                    linha = linha.ToUpper();                    
+                }
+                Console.WriteLine(linha);
                 linha = reader.ReadLine();
             }
             Console.WriteLine("3");
